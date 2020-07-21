@@ -6,13 +6,313 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".10" />
+
+    <!--guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+
+<!--end guideline-->
+
+<!--foto profile-->
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/oppa"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        />
+
+<!--Nama-->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H A N I F  Y O G A T A M A"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile"
+        app:layout_constraintStart_toStartOf="@id/ivProfile"/>
+
+<!--Link1-->
+    <TextView
+        android:id="@+id/tvLink1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- @mygladis"
+        android:textColor="#043155"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="@id/tvName"/>
+
+<!--Link2-->
+    <TextView
+        android:id="@+id/tvLink2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-@super.bookstore"
+        android:textColor="#043155"
+        app:layout_constraintTop_toBottomOf="@id/tvLink1"
+        app:layout_constraintStart_toStartOf="@id/tvLink1"/>
+
+<!--numPosts-->
+    <TextView
+        android:id="@+id/tvNumPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="10"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1" />
+
+<!--posts-->
+    <TextView
+        android:id="@+id/tvPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="Posts"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="@id/guideline1" />
+
+
+    <!--numFollowers-->
+    <TextView
+        android:id="@+id/tvNumFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="804"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1" />
+
+    <!--followers-->
+    <TextView
+        android:id="@+id/tvFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="Followers"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@id/guideline1" />
+
+    <!--numFollowing-->
+    <TextView
+        android:id="@+id/tvNumFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="2,359"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1" />
+
+    <!--following-->
+    <TextView
+        android:id="@+id/tvFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="Following"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintTop_toTopOf="@id/guideline1" />
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="edit profile"
+        app:layout_constraintStart_toEndOf="@id/guideline6"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
+        app:layout_constraintEnd_toStartOf="@id/guideline7"
+        android:clickable="true"
+        android:background="#fff"
+        />
+
+    <ImageView
+        android:id="@+id/ivPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_add_circle_outline_24"
+        app:layout_constraintBottom_toTopOf="@id/guideline9"
+        app:layout_constraintStart_toEndOf="@id/guideline6"
+        app:layout_constraintTop_toBottomOf="@id/guideline8" />
+
+    <ImageView
+        android:id="@+id/ivHighlight1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/binar"
+        app:layout_constraintBottom_toBottomOf="@id/ivPlus"
+        app:layout_constraintStart_toEndOf="@id/ivPlus"
+        app:layout_constraintTop_toTopOf="@+id/ivPlus" />
+
+    <TextView
+        android:id="@+id/tvBinar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Binar"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/ivHighlight1"
+        app:layout_constraintEnd_toEndOf="@id/ivHighlight1"
+        app:layout_constraintStart_toStartOf="@id/ivHighlight1" />
+
+    <ImageView
+        android:id="@+id/ivHighlight2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jakarta"
+        app:layout_constraintBottom_toBottomOf="@id/ivHighlight1"
+        app:layout_constraintStart_toEndOf="@id/ivHighlight1"
+        app:layout_constraintTop_toTopOf="@+id/ivHighlight1" />
+
+    <TextView
+        android:id="@+id/tvJakarta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jakarta"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/ivHighlight2"
+        app:layout_constraintEnd_toEndOf="@id/ivHighlight2"
+        app:layout_constraintStart_toStartOf="@id/ivHighlight2" />
+
+
+    <ImageView
+        android:id="@+id/ivHighlight3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/binar"
+        app:layout_constraintBottom_toBottomOf="@id/ivHighlight2"
+        app:layout_constraintStart_toEndOf="@id/ivHighlight2"
+        app:layout_constraintTop_toTopOf="@+id/ivHighlight2" />
+
+    <TextView
+        android:id="@+id/tvBinar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Binar1"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/ivHighlight3"
+        app:layout_constraintEnd_toEndOf="@id/ivHighlight3"
+        app:layout_constraintStart_toStartOf="@id/ivHighlight3" />
+
+    <ImageView
+        android:id="@+id/ivHighlight4"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/jakarta"
+        app:layout_constraintBottom_toBottomOf="@id/ivHighlight3"
+        app:layout_constraintStart_toEndOf="@id/ivHighlight3"
+        app:layout_constraintTop_toTopOf="@+id/ivHighlight3" />
+
+    <TextView
+        android:id="@+id/tvJakarta1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jakarta1"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/ivHighlight4"
+        app:layout_constraintEnd_toEndOf="@id/ivHighlight4"
+        app:layout_constraintStart_toStartOf="@id/ivHighlight4" />
+
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
