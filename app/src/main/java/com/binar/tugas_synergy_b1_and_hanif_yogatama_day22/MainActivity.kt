@@ -11,6 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        try {
+            this.supportActionBar?.hide()
+        } catch (e: NullPointerException) { }
+
+
+
         Glide.with(this)
             .load(R.drawable.oppa)
             .circleCrop()
